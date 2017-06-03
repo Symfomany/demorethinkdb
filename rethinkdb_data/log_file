@@ -1,0 +1,13 @@
+2017-06-03T08:18:49.518850000 0.007815s notice: Recursively removing directory /Users/boyer/Desktop/AppVue/rethinkdb_data/tmp
+2017-06-03T08:18:49.519794000 0.008760s notice: Initializing directory /Users/boyer/Desktop/AppVue/rethinkdb_data
+2017-06-03T08:18:49.519854000 0.008818s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/boyer/Desktop/AppVue/rethinkdb_data' did not already exist or is empty.)
+2017-06-03T08:18:49.519870000 0.008833s notice: Running rethinkdb 2.3.5 (CLANG 7.3.0 (clang-703.0.31))...
+2017-06-03T08:18:49.523598000 0.012562s notice: Running on Darwin 16.3.0 x86_64
+2017-06-03T08:18:49.523631000 0.012595s notice: Loading data from directory /Users/boyer/Desktop/AppVue/rethinkdb_data
+2017-06-03T08:18:49.633923000 0.122887s info: Automatically using cache size of 4657 MB
+2017-06-03T08:18:49.634603000 0.123567s error: TCP socket creation failed for port 29015: Address already in use.
+2017-06-03T08:19:32.068714000 0.064124s notice: Running rethinkdb 2.3.5 (CLANG 7.3.0 (clang-703.0.31))...
+2017-06-03T08:19:32.072295000 0.067703s notice: Running on Darwin 16.3.0 x86_64
+2017-06-03T08:19:32.072327000 0.067734s notice: Loading data from directory /Users/boyer/Desktop/AppVue/rethinkdb_data
+2017-06-03T08:19:32.104396000 0.099804s info: Automatically using cache size of 5250 MB
+2017-06-03T08:19:32.104986000 0.100394s error: TCP socket creation failed for port 29015: Address already in use.
