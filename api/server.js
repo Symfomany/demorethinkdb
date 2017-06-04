@@ -55,7 +55,7 @@ let connection = r.connect({
 
     app.get('/', (req, res) => {
 
-        r.table('users').filter({ enable: true }).pluck('id', 'name', 'email', 'phone', 'picture').limit(3).run(connection, (err, cursor) => {
+        r.table('users').filter({ enable: true }).pluck('id', 'username', 'name', 'email', 'phone', 'picture', 'registered', { 'address': { 'city': true } }).limit(3).run(connection, (err, cursor) => {
             if (err) throw err;
 
             cursor.toArray((err, result) => {
@@ -69,7 +69,7 @@ let connection = r.connect({
 
     app.get('/inactive', (req, res) => {
 
-        r.table('users').filter({ enable: false }).pluck('id', 'name', 'email', 'phone', 'picture').limit(3).run(connection, (err, cursor) => {
+        r.table('users').filter({ enable: false }).pluck('id', 'username', 'name', 'email', 'phone', 'picture', 'registered', { 'address': { 'city': true } }).limit(3).run(connection, (err, cursor) => {
             if (err) throw err;
 
             cursor.toArray((err, result) => {
@@ -84,7 +84,7 @@ let connection = r.connect({
 
         let limit = parseInt(req.params.limit);
 
-        r.table('users').filter({ enable: true }).pluck('id', 'name', 'email', 'phone', 'picture').limit(limit).run(connection, (err, cursor) => {
+        r.table('users').filter({ enable: true }).pluck('id', 'username', 'name', 'email', 'phone', 'picture', 'registered', { 'address': { 'city': true } }).limit(limit).run(connection, (err, cursor) => {
             if (err) throw err;
 
             cursor.toArray((err, result) => {
@@ -92,6 +92,29 @@ let connection = r.connect({
                 res.json(result)
             });
         });
+
+    });
+
+
+
+    app.post('/auth', (req, res) => {
+
+        let user = res.body.user;
+        console.log(user);
+
+        // https://github.com/jaredhanson/passport-http
+
+        passport.use(new BasicStrategy(
+            function (userid, password, done) {
+                let isUser = r.table('users').filter({ email: user.email, password: user.password }).isEmpty();
+                User.findOne({ username: userid }, function (err, user) {
+                    if (err) { return done(err); }
+                    if (!user) { return done(null, false); }
+                    if (!user.verifyPassword(password)) { return done(null, false); }
+                    return done(null, user);
+                });
+            }
+        ));
 
     });
 

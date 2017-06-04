@@ -4,7 +4,7 @@
 
 https://github.com/rethinkdb/rethinkdb
 
-<img style="width:100%;" src="/github-banner.png">
+https://blog.jscrambler.com/content/images/2016/12/building-realtime-applications-using-nodejs-rethinkdb.jpg
 
 [RethinkDB](https://www.rethinkdb.com)
 ======================================

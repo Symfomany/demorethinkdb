@@ -11,3 +11,35 @@
 2017-06-03T08:19:32.072327000 0.067734s notice: Loading data from directory /Users/boyer/Desktop/AppVue/rethinkdb_data
 2017-06-03T08:19:32.104396000 0.099804s info: Automatically using cache size of 5250 MB
 2017-06-03T08:19:32.104986000 0.100394s error: TCP socket creation failed for port 29015: Address already in use.
+2017-06-04T10:33:23.139546000 0.027017s notice: Running rethinkdb 2.3.5 (CLANG 7.3.0 (clang-703.0.31))...
+2017-06-04T10:33:23.145151000 0.032620s notice: Running on Darwin 16.3.0 x86_64
+2017-06-04T10:33:23.145178000 0.032646s notice: Loading data from directory /Users/boyer/Desktop/AppVue/rethinkdb_data
+2017-06-04T10:33:23.178781000 0.066249s info: Automatically using cache size of 4964 MB
+2017-06-04T10:33:23.179179000 0.066647s notice: Listening for intracluster connections on port 29015
+2017-06-04T10:33:23.180791000 0.068259s notice: Listening for client driver connections on port 28015
+2017-06-04T10:33:23.180873000 0.068341s notice: Listening for administrative HTTP connections on port 8080
+2017-06-04T10:33:23.180875000 0.068342s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-06-04T10:33:23.180877000 0.068344s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-06-04T10:33:23.180878000 0.068346s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-06-04T10:33:23.180881000 0.068348s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-06-04T10:33:23.180883000 0.068351s notice: Server ready, "MBP_de_boyer_y6a" 90bf22d7-7ab9-4256-ac2c-2dc8a93de609
+2017-06-04T10:33:35.772921000 12.661015s notice: Server got SIGINT from pid 526, uid 501; shutting down...
+2017-06-04T10:33:35.773143000 12.661236s notice: Shutting down client connections...
+2017-06-04T10:33:35.773293000 12.661386s notice: All client connections closed.
+2017-06-04T10:33:35.773303000 12.661396s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-06-04T10:33:35.776113000 12.664206s notice: Storage engine shut down.
+2017-06-04T10:33:39.043238000 0.010521s notice: Running rethinkdb 2.3.5 (CLANG 7.3.0 (clang-703.0.31))...
+2017-06-04T10:33:39.048970000 0.016249s notice: Running on Darwin 16.3.0 x86_64
+2017-06-04T10:33:39.049025000 0.016303s notice: Loading data from directory /Users/boyer/Desktop/AppVue/rethinkdb_data
+2017-06-04T10:33:39.086352000 0.053630s info: Automatically using cache size of 4933 MB
+2017-06-04T10:33:39.086668000 0.053946s notice: Listening for intracluster connections on port 29015
+2017-06-04T10:33:39.087539000 0.054817s notice: Listening for client driver connections on port 28015
+2017-06-04T10:33:39.087606000 0.054885s notice: Listening for administrative HTTP connections on port 8080
+2017-06-04T10:33:39.087608000 0.054886s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-06-04T10:33:39.087610000 0.054888s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-06-04T10:33:39.087611000 0.054889s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-06-04T10:33:39.087613000 0.054891s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-06-04T10:33:39.087616000 0.054894s notice: Server ready, "MBP_de_boyer_y6a" 90bf22d7-7ab9-4256-ac2c-2dc8a93de609
+2017-06-04T10:35:37.884364000 118.857456s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: Starting a new Raft election for term 1.
+2017-06-04T10:35:37.884528000 118.857619s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: Added replica on this server.
+2017-06-04T10:35:37.903622000 118.876714s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: This server is Raft leader for term 1. Latest log index is 0.
