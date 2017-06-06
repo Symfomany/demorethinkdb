@@ -1,11 +1,11 @@
 <template>
   <div class="row card">
-    <form class="col s12 card-content" @submit.prevent="authentifiation">
+    <form method="post" class="col s12 card-content" @submit.prevent="authentifiation">
       <div class="row">
         
          <div class="row">
         <div class="input-field col s12">
-          <input v-model="user.email" id="email" type="email" class="validate">
+          <input v-model="user.username" id="email" type="email" class="validate">
           <label for="email">Email</label>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default {
   data(){
     return {
       user: {
-        email: '',
+        username: '',
         password: ''
       }
     }
@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     authentifiation(){
-       this.$http.post("http://localhost:3000/auth", this.user).then(response => {
+       this.$http.post("http://localhost:3000/login", this.user).then(response => {
          console.log(response)
       });
     }

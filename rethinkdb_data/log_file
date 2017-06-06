@@ -43,3 +43,31 @@
 2017-06-04T10:35:37.884364000 118.857456s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: Starting a new Raft election for term 1.
 2017-06-04T10:35:37.884528000 118.857619s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: Added replica on this server.
 2017-06-04T10:35:37.903622000 118.876714s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: This server is Raft leader for term 1. Latest log index is 0.
+2017-06-05T22:19:00.832780000 0.019815s notice: Running rethinkdb 2.3.5 (CLANG 7.3.0 (clang-703.0.31))...
+2017-06-05T22:19:00.837675000 0.024708s notice: Running on Darwin 16.3.0 x86_64
+2017-06-05T22:19:00.837701000 0.024733s notice: Loading data from directory /Users/boyer/Desktop/AppVue/rethinkdb_data
+2017-06-05T22:19:00.876366000 0.063398s info: Automatically using cache size of 3707 MB
+2017-06-05T22:19:00.876723000 0.063756s notice: Listening for intracluster connections on port 29015
+2017-06-05T22:19:00.893211000 0.080243s notice: Listening for client driver connections on port 28015
+2017-06-05T22:19:00.893336000 0.080368s notice: Listening for administrative HTTP connections on port 8080
+2017-06-05T22:19:00.893343000 0.080375s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-06-05T22:19:00.893345000 0.080377s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-06-05T22:19:00.893346000 0.080379s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-06-05T22:19:00.893348000 0.080380s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-06-05T22:19:00.893357000 0.080389s notice: Server ready, "MBP_de_boyer_y6a" 90bf22d7-7ab9-4256-ac2c-2dc8a93de609
+2017-06-05T22:19:02.462555000 1.649741s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: Starting a new Raft election for term 2.
+2017-06-05T22:19:02.486335000 1.673522s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: This server is Raft leader for term 2. Latest log index is 2.
+2017-06-06T06:14:53.281702000 0.021664s notice: Running rethinkdb 2.3.5 (CLANG 7.3.0 (clang-703.0.31))...
+2017-06-06T06:14:53.287774000 0.027735s notice: Running on Darwin 16.3.0 x86_64
+2017-06-06T06:14:53.287808000 0.027768s notice: Loading data from directory /Users/boyer/Desktop/AppVue/rethinkdb_data
+2017-06-06T06:14:53.328002000 0.067962s info: Automatically using cache size of 4845 MB
+2017-06-06T06:14:53.328361000 0.068320s notice: Listening for intracluster connections on port 29015
+2017-06-06T06:14:53.342778000 0.082737s notice: Listening for client driver connections on port 28015
+2017-06-06T06:14:53.342907000 0.082866s notice: Listening for administrative HTTP connections on port 8080
+2017-06-06T06:14:53.342917000 0.082876s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-06-06T06:14:53.342919000 0.082878s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-06-06T06:14:53.342921000 0.082880s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-06-06T06:14:53.342923000 0.082882s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-06-06T06:14:53.342930000 0.082890s notice: Server ready, "MBP_de_boyer_y6a" 90bf22d7-7ab9-4256-ac2c-2dc8a93de609
+2017-06-06T06:14:54.708577000 1.448519s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: Starting a new Raft election for term 3.
+2017-06-06T06:14:54.736177000 1.476119s info: Table 136832a4-7eb5-4ae3-a3cc-58ec31e531c9: This server is Raft leader for term 3. Latest log index is 5.

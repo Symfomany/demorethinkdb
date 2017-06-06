@@ -11,9 +11,9 @@
           <div class="col s3 detail"><i class="material-icons">account_circle</i> {{ user.username }}</div>
           <div class="col s3 detail"><i class="material-icons">email</i> {{ user.email }}</div>
           <div class="col s3 detail"><i class="material-icons">phone</i> {{ user.phone }}</div>
-          <div class="col s3 detail"><i class="material-icons">place</i> {{ user.address.city }}</div>
-
         </div>
+
+        <router-link :to="{ name: 'edit', params: { id: user.id }}"><i class="material-icons">edit</i>Editer ce profil</router-link>
     </div>
 
 </template>
