@@ -6,7 +6,11 @@
           <a><i v-if="!user.enabled" class="material-icons">highlight_off</i></a>
         </span>
       <img :src="user.picture" alt="" class="circle">
-      <h3><b><router-link :to="{ name: 'detail', params: { id: user.id }}">{{ user.name }}</router-link></b></h3>
+      <h3><b><router-link :to="{ name: 'detail', params: { id: user.id }}">{{ user.name }}</router-link></b> - <b>{{ user.category }}</b></h3>
+
+      <ul>
+        <li>Nb de langues: <i>{{ user.languages.length }} langues</i></li>
+      </ul>
         <div class="row s12 details">
           <div class="col s3 detail"><i class="material-icons">account_circle</i> {{ user.username }}</div>
           <div class="col s3 detail"><i class="material-icons">email</i> {{ user.email }}</div>

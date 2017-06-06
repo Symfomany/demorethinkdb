@@ -6,11 +6,10 @@
         <div class="indeterminate"></div>
     </div>
 
+    <auth></auth>
+    <add @addItem="addItem"></add>
+
     <ul class="collection with-header z-depth-2" v-if="users.length">
-        <li class="collection-header">
-          {{ users.length }} Utilisateurs actifs
-          <a @click="inactive" class="flow-text waves-effect waves-light btn-floating btn btn-sm cyan"><i class="material-icons left">do_not_disturb</i></a>
-        </li>
         <item @remove="removeItem(user)" v-for="user in users" :key="user.id" :user="user" class="list-item"></item>
     </ul>
     <a id="more" @click="more" class="center-align btn waves-effect waves-light teal"><i class="material-icons">more_horiz</i></a>
@@ -23,10 +22,11 @@
 
 import Item from '@/components/Item'
 import Auth from '@/components/Auth'
+import Add from '@/components/Add'
 
 export default {
   name: 'list',
-  components: {item: Item, auth: Auth},
+  components: {item: Item, auth: Auth, add: Add},
   data(){
     return {
       users: [],
@@ -34,11 +34,16 @@ export default {
     }
   },
   mounted(){
-      this.$http.get("http://localhost:3000/").then(response => {
+      this.$http.get("http://localhost:3000/users").then(response => {
         this.users = response.body;
       });
   },
   methods: {
+    addItem(){
+      this.$http.get("http://localhost:3000/users").then(response => {
+        this.users = response.body;
+      });
+    },
     removeItem(item){
       console.log(item)
       this.$http.delete(`http://localhost:3000/remove/${item.id}`).then(response => {

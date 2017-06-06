@@ -24,6 +24,9 @@
 
   </div>
   </form>
+
+      <button@click="check" class="waves-effect waves-light btn"><i class="material-icons left">check_circle</i>Check if connected</button>
+      <p>{{ connected }}</p>
     </div>
 
 </template>
@@ -38,6 +41,7 @@ export default {
   components: {item: Item},
   data(){
     return {
+      connected: null,
       user: {
         username: '',
         password: ''
@@ -48,6 +52,11 @@ export default {
       
   },
   methods: {
+    check(){
+      this.$http.get("http://localhost:3000/checkconnect").then(response => {
+         this.connected = response.body;
+      });
+    },
     authentifiation(){
        this.$http.post("http://localhost:3000/login", this.user).then(response => {
          console.log(response)
