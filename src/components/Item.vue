@@ -12,8 +12,9 @@
           <div class="col s3 detail"><i class="material-icons">email</i> {{ user.email }}</div>
           <div class="col s3 detail"><i class="material-icons">phone</i> {{ user.phone }}</div>
         </div>
+        <a class="red-text" @click="remove"><i class="material-icons">delete</i> Supprimer ce profil</a>
 
-        <router-link :to="{ name: 'edit', params: { id: user.id }}"><i class="material-icons">edit</i>Editer ce profil</router-link>
+        <router-link :to="{ name: 'edit', params: { id: user.id }}"><i class="material-icons">edit</i> Editer ce profil</router-link>
     </div>
 
 </template>
@@ -22,6 +23,11 @@
 export default {
   name: 'item',
   props: ['user'],
+  methods: {
+    remove: function () {
+      this.$emit('remove')
+    }
+  },
   data(){
     return {
     }

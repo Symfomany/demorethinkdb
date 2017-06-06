@@ -13,7 +13,7 @@
           {{ users.length }} Utilisateurs actifs
           <a @click="inactive" class="flow-text waves-effect waves-light btn-floating btn btn-sm cyan"><i class="material-icons left">do_not_disturb</i></a>
         </li>
-        <item v-for="user in users" :key="user.id" :user="user" class="list-item"></item>
+        <item @remove="removeItem(user)" v-for="user in users" :key="user.id" :user="user" class="list-item"></item>
     </ul>
     <a id="more" @click="more" class="center-align btn waves-effect waves-light teal"><i class="material-icons">more_horiz</i></a>
     </div>
@@ -41,8 +41,13 @@ export default {
       });
   },
   methods: {
+    removeItem(item){
+      console.log(item)
+      this.$http.delete(`http://localhost:3000/remove/${item.id}`).then(response => {
+        this.users = response.body;
+      });
+    },
     inactive(){
-      this.limit += 3;
       this.$http.get(`http://localhost:3000/inactive`).then(response => {
         this.users = response.body;
       });
