@@ -1,7 +1,5 @@
 <template>
   <div class="list">
-
-  <auth></auth>
   
     <div class="row">
      <div class="progress" v-if="!users.length">
